@@ -1,0 +1,27 @@
+.tb1 tr th{
+    color: white;
+    background-color: red;
+}
+
+h1{
+    font-size: 50px;
+    color: blue;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 14%;
+}
+
+.tb1 tr{
+    text-align: center;
+}
+table{
+    font-size: 150%;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.t1{
+    color: red;
+}

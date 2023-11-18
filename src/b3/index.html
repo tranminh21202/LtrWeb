@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Đức Minh</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <script>
+        function click_btn_xoa() {
+            let a = document.getElementById("idemail");
+            a.value = "";
+            let b = document.getElementById("idsdt");
+            b.value = "";
+            let c = document.getElementById("idkhuvuc");
+            c.value = "option1"
+            let d = document.getElementById("idbinhluan");
+            d.value = ""
+            let x = document.getElementsByName("ll");
+            x[0].checked = true;
+            let y = document.getElementById("dongY");
+            y.checked = false;
+        }
+        function click_btn_dangky() {
+            let a = document.getElementById("idemail").value;
+            let b = document.getElementById("idsdt").value;
+            var c = document.getElementById("idkhuvuc");
+            var cvalue = c.options[c.selectedIndex].value;
+            let ctext = String(cvalue);
+            let d = document.getElementById("idbinhluan").value;
+            let radios = document.getElementsByName('ll');
+            let x = "";
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    x = radios[i].value;
+                    break;
+                }
+            }
+            let y = document.getElementById("dongY");
+            if (a !== "" && b !== "" && cvalue !== "luachon" && y.checked === true) {
+                window.open("./index2.html");
+            }
+            //if (a === '' || b === '' || ctext === "luachon" || y.checked === fasle) {
+            else {
+                var xemlai = document.getElementById('xemlaithongtin');
+                var xemlaiText = "<h2>Hãy xem xét lại các thông tin đã nhập:<br></h2>";
+                let ytext = "Đồng ý";
+                let dodaibl = "Độ dài bình luận = " + String(d.length);
+                if (a === '') {
+                    a = "<p1>Thông tin bắt buộc</p1>";
+                }
+                if (b === '') {
+                    b = "<p1>Thông tin bắt buộc</p1>";
+                }
+                if (ctext === "luachon") {
+                    ctext = "<p1>Thông tin bắt buộc</p1>";
+                }
+                if (y.checked === false) {
+                    ytext = "<p1>Thông tin bắt buộc</p1>";
+                }
+                xemlaiText += "Địa chỉ email: " + a + "<br>";
+                xemlaiText += "Số điện thoại: " + b + "<br>";
+                xemlaiText += "Khu vực: " + ctext + "<br>";
+                xemlaiText += "Liên lạc: " + x + "<br>";
+                xemlaiText += "Đồng ý với các quy định: " + ytext + "<br>";
+                xemlaiText += "Bình luận: " + dodaibl + "<br><br><br>";
+
+                xemlai.innerHTML = xemlaiText;
+            }
+        }
+
+    </script>
+    <div class="container">
+        <h1>Đăng ký một tài khoản mới</h1>
+        <p>Địa chỉ E-Mail:</p>
+        <input type="text" class="email" value="" id="idemail">
+        <br><br>
+        <p>Số điện thoại:</p>
+        <input type="text" class="sdt" value="" id="idsdt">
+        <br><br>
+        <p>Khu vực:</p>
+        <select class="khuvuc" id="idkhuvuc">
+            <option value="luachon">Lựa chọn</option>
+            <option value="Miền Bắc">Miền Bắc</option>
+            <option value="Miền Trung">Miền Trung</option>
+            <option value="Miền Nam">Miền Nam</option>
+        </select>
+        <br><br>
+        <p>Liên lạc với tôi thông qua:</p>
+        <input class="lienlac" name="ll" type="radio" checked value="Tin nhắn">Tin nhắn
+        <input class="lienlac" name="ll" type="radio" value="Email">Email
+        <input class="lienlac" name="ll" type="radio" value="Điện thoại">Điện thoại
+        <input class="lienlac" name="ll" type="radio" value="Không liên lạc">Không liên lạc
+        <br><br>
+        <p>Đồng ý với các quy định:</p>
+        <input type="checkbox" id="dongY" class="dongy">
+        <p>Tôi đồng ý</p>
+        <br><br>
+        <p class="bl">Bình luận:</p>
+        <input type="text" class="binhluan" id="idbinhluan">
+        <br><br>
+        <button class="btn_dangky" onclick="click_btn_dangky()">Đăng ký</button>
+        <button class="btn_xoa" onclick="click_btn_xoa()">Xóa</button>
+        <br><br>
+        <div id="xemlaithongtin"></div>
+    </div>
+</body>
+
+</html>

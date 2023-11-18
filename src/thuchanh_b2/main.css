@@ -1,0 +1,105 @@
+.text1 {
+    background-color:purple;
+    background-size: cover;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text2 {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn1 {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 250px;
+    left: 30px;
+}
+
+.btn2 {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 320px;
+    left: 30px;
+}
+
+.btn3 {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 390px;
+    left: 30px;
+}
+
+.btn1,.btn2,.btn3 {
+    display: block; 
+}
+
+.btn4 {
+    background-color:darkorange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 750px;
+    left: 550px;
+}
+
+.btn5 {
+    background-color:purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 750px;
+    left: 730px;
+}
+
+.column {
+    background-color:dodgerblue; 
+    color: white;
+    text-align: center;
+    display: inline-block;
+    margin: 2px;
+    padding: 5px;
+    transform-origin: bottom;
+}
+
+#dãySố {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    flex-direction: row;
+    align-items: flex-end;
+}
+

@@ -1,0 +1,25 @@
+.text-center {
+  text-align: center;
+}
+.policy {
+  color: red;
+}
+
+.ambition {
+  color: blue;
+}
+.container {
+  display: flex;
+}
+
+.image {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+}
+
+table,
+th,
+td {
+  border: 2px solid orangered;
+}
